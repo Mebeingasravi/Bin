@@ -1,0 +1,27 @@
+Sub DataSeparator()
+    Dim FullCellValue As String
+    Dim Value() As String
+    FullCellValue = Cells(1, 1)
+    MsgBox (FullCellValue)
+    Value = getSplitValue(FullCellValue)
+    
+    Dim CurrentColl As Integer
+    CurrentColl = 1
+    
+    For Each k In Value
+        TempK = k
+        MsgBox (TempK)
+        CurrentColl = CurrentColl + 1
+        Cells(1, CurrentColl) = k 'place value at specific cell
+    Next
+End Sub
+
+Public Function getSplitValue(FullCellValue As String) As String()
+
+    Dim SliptValue() As String
+
+    SplitValue = Split(FullCellValue, "~")
+
+    getSplitValue = SplitValue
+
+End Function

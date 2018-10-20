@@ -2,3 +2,6 @@ Uninstall just apache2   sudo apt-get remove apache2
 Uninstall apache2 and its dependencies   sudo apt-get remove --auto-remove apache2
 Purging your config/data too     sudo apt-get purge apache2  or   sudo apt-get purge --auto-remove apache2
 
+To create new ssk key                                       ssh-keygen -t rsa
+If key is already created                                   ssh-copy-id 
+if copy id already typed but password is wornd              ssh
