@@ -1,0 +1,6 @@
+array=(42074 42075 42076); 
+for i in ${!array[@]}; 
+do k=${array[i]}; 
+curl -v -u xxx@xxx.com:password_00 -X DELETE 'https://SITENAME.freshdesk.com/api/v2/tickets/'"$k"; 
+echo ${array[i]}; 
+done
